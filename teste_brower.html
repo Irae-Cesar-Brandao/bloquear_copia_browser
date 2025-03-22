@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bloqueio de Cópia de texto de sites</title>
+  <meta name="author" content="Iraê César Brandão">
+  <meta content="" name="keywords">
+  <meta name="keywords" content="bloqueios de cliques, permissões, clique do mouse, bloqueios, inibir copias">
+
+<!-- estilização CSS -->
+  <style>
+    body {
+      user-select: none;
+      -webkit-user-select: none; /* PARA BLOQUEAR SAFARI E CHROME */
+      -moz-user-select: none;  /* PARA  BLOQUEAR FIREFOX */
+    }
+  </style>
+
+<!-- SCRIPT DE ALERTA DE CLIQUE E CÓPIA NO BROWSER--> 
+<script>
+function funcao1()
+{
+alert("Todos os direitos reservados. É proibida a cópia, reprodução ou distribuição deste conteúdo sem autorização prévia. Sujeito a penalidades previstas na Lei nº 9.610/98. ");
+}
+</script>
+
+</head>
+
+<!-- DESABILITAR BOTÃO DIREITO DO MOUSE NO BROWSER "ONCONTEXTMENU" E PARA BLOQUEAR SELEÇÃO DE TEXTO "ONSELECTSTART" E "ONCOPY"-->
+<body oncontextmenu="return false;" onselectstart="return false;" oncopy="return false;">
+  <h1>Texto protegido</h1>
+
+<!-- AVISO DE PROIBIÇÃO DE REPRODUÇÃO DO CONTEÚDO DO BROWSER --> 
+<p> <input type="button" onclick="funcao1()" value="PROIBIDA REPRODUÇÃO" />
+
+  <p>Este texto não pode ser copiado facilmente.</p>
+ <p> Para bloquear a cópia de textos em seu site, você pode usar JavaScript junto com atributos HTML— mas lembre-se que nenhuma delas é 100% segura contra usuários mais experientes (eles podem inspecionar o código ou desativar o JavaScript). Ainda assim, elas servem como uma barreira básica </p>
+
+
+
+<!-- IMAGEM DE TESTE DO SITE -->
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*es0fo8L7Gd5YqlQUSmOpNA.gif"  alt="Imagem de Teste"   width="400"
+  height="341" />
+
+
+<!-- JAVASCRIPT COMPLETO -->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('copy', event => event.preventDefault());
+    document.addEventListener('selectstart', event => event.preventDefault());
+  </script>
+
+
+
+
+</body>
+<footer>
+      <!-- FIM DO RODAPÉ-->
+         <p style="margin-left:3px; margin-top:10px; text-align:center; margin-bottom: 10px; text-decoration: none; font-size:13px; color: whitesmoke ;padding-bottom: 0px; padding-bottom:15px;  background-color:green;">
+        Designed by  : By Iraê César Brandão  <a target="_blank" href="https://iraecbrandao.com.br/">Dev - Luck Way® Informática</a>    </p>
+  <p style="text-align:center; font-size:14px;">
+    © 2025 Luck Way® Informática<. Todos os direitos reservados. É proibida a cópia, reprodução ou distribuição deste conteúdo sem autorização prévia. Sujeito a penalidades previstas na Lei nº 9.610/98.
+  </p>
+</footer>
+</html>
