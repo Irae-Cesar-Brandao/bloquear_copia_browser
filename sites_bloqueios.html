@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="bloqueios de cliques, permissões, clique do mouse, bloqueios, inibir copias">
+    <title>Bloqueio de Cópia de texto de sites</title>
+
+    <!-- ESTILIZAÇÃO CSS DE BLOQUEIO DO SITE -->
+    <style>
+        body {
+            user-select: none;
+            -webkit-user-select: none; /* PARA BLOQUEAR SAFARI E CHROME */
+            -moz-user-select: none;  /* PARA  BLOQUEAR FIREFOX */
+        }
+    </style>
+
+    <!-- SCRIPT DE ALERTA DE CLIQUE E CÓPIA NO BROWSER--> 
+    <script>
+        function funcao1() {
+            alert("Todos os direitos reservados. É proibida a cópia, reprodução ou distribuição deste conteúdo sem autorização prévia. Sujeito a penalidades previstas na Lei nº 9.610/98.");
+        }
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('copy', event => event.preventDefault());
+        document.addEventListener('selectstart', event => event.preventDefault());
+    </script>
+</head>
+
+<body oncontextmenu="return false;" onselectstart="return false;" oncopy="return false;">
+    <div id="page2">
+        <h1 style="color: green;">COMO PROTEGER SITES DE CÓPIAS</h1>
+        <hr><hr>
+        <h1 style="color: red;">Exemplo de Texto protegido</h1>
+        <input type="button" onclick="funcao1()" value="PROIBIDA REPRODUÇÃO" style="color:#800080" />
+        <p><b>Este texto e o conteúdo desta página não podem ser copiados facilmente.</b></p>
+        <p>Para bloquear a cópia de textos em seu site, você pode usar JavaScript junto com atributos HTML— mas lembre-se que nenhuma delas é 100% segura contra usuários mais experientes (eles podem inspecionar o código ou desativar o JavaScript). Ainda assim, elas servem como uma barreira básica.</p>
+    </div>
+
+    <hr><hr>
+
+    <!-- PÁGINA CONTEÚDO EXTRA SLIDE -->
+    <div id="page">  
+        <div class="slider-container">
+            <button id="slider-prev" onclick="prev()"></button>
+            <button id="slider-next" onclick="next()"></button>
+            <div class="slider">
+                <img id="slider-clone-last" src="images/figura7.jpg">
+                <img src="images/figura1.jpg">
+                <img src="images/figura2.jpg">
+                <img src="images/figura3.jpg">
+                <img src="images/figura4.jpg">
+                <img src="images/figura5.jpg">
+                <img src="images/figura6.jpg">
+                <img src="images/figura7.jpg">
+                <img id="slider-clone-first" src="images/figura1.jpg">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div id="page3">
+        <hr>
+        <h1 style="color: green;">PROCEDIMENTOS PARA BLOQUEIO EM HTML, CSS E JAVASCRIPT</h1>
+        <b>BLOQUEAR CÓPIA DE CONTEÚDOS DE SITE</b>
+        <p>1. Desabilitar o botão direito do mouse:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>&lt;body oncontextmenu="return false;"/&gt;</code></pre>
+
+        <p>2. Bloquear seleção de texto:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>&lt;body onselectstart="return false;" oncopy="return false;"/&gt;</code></pre>
+
+        <p>3. JavaScript mais completo:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('copy', event => event.preventDefault());
+document.addEventListener('selectstart', event => event.preventDefault());</code></pre>
+
+        <p>4. CSS para bloquear seleção de texto:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}</code></pre>
+
+        <a href="teste_brower.html" target="_blank">Exemplo template - Clique para Abrir</a>
+        <img src="Exemplo template.jpg" alt="Template Exemplo">
+        <img src="images/codigo_completo.jpg" style="width: 100%; height: 50%;" alt="Código Completo">
+
+        <p>5. Exemplo completo:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"/&gt;
+  &lt;title&gt;Bloqueio de Cópia&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Texto protegido&lt;/h1&gt;
+  &lt;p&gt;Este texto não pode ser copiado facilmente.&lt;/p&gt;
+  &lt;script&gt;
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('copy', event => event.preventDefault());
+    document.addEventListener('selectstart', event => event.preventDefault());
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>6. Rodapé com aviso legal:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>&lt;footer&gt;
+  &lt;p style="text-align:center; font-size:14px;"&gt;
+    © 2025 Seu Nome ou Nome da Empresa. Todos os direitos reservados. É proibida a cópia, reprodução ou distribuição deste conteúdo sem autorização prévia. Sujeito à Lei nº 9.610/98.
+  &lt;/p&gt;  
+&lt;/footer&gt;</code></pre>
+
+        <p>7. Desativar botão direito via script:</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>document.addEventListener('contextmenu', event => event.preventDefault());</code></pre>
+
+        <p>8. Segurança adicional: desabilitar teclas de atalho comuns para cópia (Ctrl+C, Ctrl+U, F12):</p>
+        <pre style="background-color: #222; color: #0f0; padding: 10px; border-radius: 5px;"><code>document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'u')) {
+        alert('Ação bloqueada!');
+        return false;
+    }
+    if (e.key === 'F12') {
+        alert('Ação bloqueada!');
+        return false;
+    }
+};</code></pre>
+
+        <p>Essas medidas não garantem 100% de proteção, mas dificultam a cópia para a maioria dos usuários. Para proteção mais avançada, considere marcas d'água, DRM ou serviços de hospedagem com proteção de conteúdo.</p>
+
+
+📝 <b>Para documentos (Word, PDF etc.): </b>
+<br>
+Insira no rodapé ou no início do documento: 
+<br><br>
+
+<b>Aviso de Direitos Autorais: </b>
+<br>
+🔒 Este conteúdo é protegido pela Lei de Direitos Autorais (Lei nº 9.610/98). É proibida a reprodução total ou parcial, por qualquer meio, sem autorização expressa do autor. A violação dos direitos autorais é crime e está sujeita a sanções civis e criminais.
+
+
+<br><br>
+
+🔒<b> Mensagem curta (página ou slide): </b>
+<br>
+🚫 Proibido copiar ou reproduzir este conteúdo. Todos os direitos reservados.
+<br>
+    </div>
+</body>
+
+<footer>
+
+ <!-- FIM  RODAPÉ-->
+         <p style="margin-left:3px; margin-top:10px; text-align:center; margin-bottom: 10px; text-decoration: none; font-size:13px; color: whitesmoke ;padding-bottom: 0px; padding-bottom:15px;  background-color:green;">
+        Designed by  : By Iraê César Brandão  <a target="_blank" href="https://iraecbrandao.com.br/">Dev - Luck Way® Informática</a>    </p>
+  <p style="text-align:center; font-size:14px;">
+    © 2025 Luck Way® Informática<. Todos os direitos reservados. 
+  </p>
+</footer>
+</html>
